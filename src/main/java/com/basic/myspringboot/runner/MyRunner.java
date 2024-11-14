@@ -32,6 +32,7 @@ public class MyRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        System.out.println(">> Logger 클래스명 = " + logger.getClass().getName());
         logger.info("CustomVO = {}", customVO);
         logger.info("MyBootProperties 객체의 getFullName() = {}", properties.getFullName());
         logger.info("${myboot.name} Property = {}", environment.getProperty("myboot.name"));
