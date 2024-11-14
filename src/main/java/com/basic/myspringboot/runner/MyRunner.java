@@ -2,6 +2,8 @@ package com.basic.myspringboot.runner;
 
 import com.basic.myspringboot.config.vo.CustomVO;
 import com.basic.myspringboot.property.MyBootProperties;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
@@ -26,19 +28,21 @@ public class MyRunner implements ApplicationRunner {
     @Autowired
     private CustomVO customVO;
 
+    private final Logger logger = LoggerFactory.getLogger(MyRunner.class);
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println("CustomVO = " + customVO);
-        System.out.println("MyBootProperties 객체의 getFullName() = " + properties.getFullName());
-        System.out.println("${myboot.name} Property = " + environment.getProperty("myboot.name"));
-        System.out.println("${myboot.fullName} Property = " + fullName);
-        System.out.println("${myboot.age} Property = " + age);
+        logger.info("CustomVO = {}", customVO);
+        logger.info("MyBootProperties 객체의 getFullName() = {}", properties.getFullName());
+        logger.info("${myboot.name} Property = {}", environment.getProperty("myboot.name"));
+        logger.info("${myboot.fullName} Property = {}", fullName);
+        logger.info("${myboot.age} Property = {}", age);
 
-        System.out.println("VM argument -foo = " + args.containsOption("foo"));
-        System.out.println("Program argument -bar = " + args.containsOption("bar"));
+        logger.debug("VM argument -foo = {}", args.containsOption("foo"));
+        logger.debug("Program argument -bar = {}", args.containsOption("bar"));
         //argument name 목록 출력하기
         //forEach(Consumer) Consumer 의 추상메서드 void accept(T t) 람다식
-        args.getOptionNames().forEach(name -> System.out.println("argument name = " + name));
+        args.getOptionNames().forEach(name -> logger.info("argument name = {}", name));
         //Method Reference
         args.getOptionNames().forEach(System.out::println);
     }
