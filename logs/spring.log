@@ -1,0 +1,26 @@
+2024-11-14T15:48:18.308+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] com.basic.myspringboot.Application       : Starting Application using Java 17 with PID 42880 (C:\SpringBoot_Basic\MySpringBoot3.2App\target\classes started by vega2 in C:\SpringBoot_Basic\MySpringBoot3.2App)
+2024-11-14T15:48:18.310+09:00 DEBUG 42880 --- [MySpringBoot3.2App] [restartedMain] com.basic.myspringboot.Application       : Running with Spring Boot v3.2.11, Spring v6.1.14
+2024-11-14T15:48:18.311+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] com.basic.myspringboot.Application       : The following 1 profile is active: "test"
+2024-11-14T15:48:20.415+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-14T15:48:20.426+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2024-11-14T15:48:21.036+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-11-14T15:48:21.056+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-11-14T15:48:21.057+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2024-11-14T15:48:21.268+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-11-14T15:48:21.270+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2953 ms
+2024-11-14T15:48:21.574+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2024-11-14T15:48:21.595+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn30: url=jdbc:h2:mem:2feb7e90-560f-4d7b-9387-da4e77d09f6a user=SA
+2024-11-14T15:48:21.596+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2024-11-14T15:48:21.597+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:2feb7e90-560f-4d7b-9387-da4e77d09f6a'
+2024-11-14T15:48:21.909+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-14T15:48:21.921+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-11-14T15:48:21.935+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-14T15:48:21.987+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-14T15:48:21.988+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-14T15:48:22.124+09:00  WARN 42880 --- [MySpringBoot3.2App] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-14T15:48:22.568+09:00  WARN 42880 --- [MySpringBoot3.2App] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-14T15:48:23.397+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-11-14T15:48:23.421+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-11-14T15:48:23.530+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-11-14T15:48:23.543+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] com.basic.myspringboot.Application       : Started Application in 5.417 seconds (process running for 634.992)
+2024-11-14T15:48:23.554+09:00  INFO 42880 --- [MySpringBoot3.2App] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
