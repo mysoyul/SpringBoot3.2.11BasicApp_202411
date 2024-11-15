@@ -19,15 +19,18 @@ public class UserInfoUserDetailsService implements UserDetailsService {
     private PasswordEncoder passwordEncoder;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Optional<UserInfo> optionalUserInfo = repository.findByEmail(username);
-        return optionalUserInfo.map(userInfo -> new UserInfoUserDetails(userInfo))
-                //userInfo.map(UserInfoUserDetails::new)
-                .orElseThrow(() -> new UsernameNotFoundException("user not found " + username));
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        //UserInfo 존재여부 체크
+        Optional<UserInfo> optionalUserInfo = repository.findByEmail(email);
+        // Optional map(Function<UserInfo,UserInfoUserDetails>)
+        return //optionalUserInfo.map(userInfo -> new UserInfoUserDetails(userInfo))
+                optionalUserInfo.map(UserInfoUserDetails::new)
+                .orElseThrow(() -> new UsernameNotFoundException("user not found " + email));
 
     }
 
     public String addUser(UserInfo userInfo) {
+        //Password 암호화
         userInfo.setPassword(passwordEncoder.encode(userInfo.getPassword()));
         UserInfo savedUserInfo = repository.save(userInfo);
         return savedUserInfo.getName() + " user added!!";
