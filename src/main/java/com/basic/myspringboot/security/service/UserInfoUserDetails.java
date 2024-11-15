@@ -1,5 +1,6 @@
-package com.basic.myspringboot.security.model;
+package com.basic.myspringboot.security.service;
 
+import com.basic.myspringboot.security.model.UserInfo;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,8 +19,8 @@ public class UserInfoUserDetails implements UserDetails {
 
     public UserInfoUserDetails(UserInfo userInfo) {
         this.userInfo = userInfo;
-        this.email=userInfo.getEmail();
-        this.password=userInfo.getPassword();
+        this.email = userInfo.getEmail();
+        this.password = userInfo.getPassword();
         this.authorities= Arrays.stream(userInfo.getRoles().split(","))
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
