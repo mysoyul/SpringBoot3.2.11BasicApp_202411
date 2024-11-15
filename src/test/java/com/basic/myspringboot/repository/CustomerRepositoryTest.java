@@ -45,7 +45,12 @@ class CustomerRepositoryTest {
         Customer customer1 = repository.findByCustomerId("A001")
                 .orElseThrow(() -> new RuntimeException("Customer Not Found"));
         assertThat(customer1.getCustomerName()).isEqualTo("스프링");
+    }
 
-
+    @Test
+    void notFound() {
+        Customer customer1 = repository.findByCustomerId("B001")
+                .orElseThrow(() -> new RuntimeException("Customer Not Found"));
+        assertThat(customer1).isNull();
     }
 }

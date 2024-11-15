@@ -1973,3 +1973,33 @@ Caused by: org.springframework.data.mapping.PropertyReferenceException: No prope
 2024-11-15T11:06:27.038+09:00  INFO 21644 --- [MySpringBoot3.2App] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2024-11-15T11:06:27.045+09:00  INFO 21644 --- [MySpringBoot3.2App] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
 2024-11-15T11:06:27.069+09:00  INFO 21644 --- [MySpringBoot3.2App] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2024-11-15T11:15:51.999+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.CustomerRepositoryTest           : Starting CustomerRepositoryTest using Java 17 with PID 32320 (started by vega2 in C:\SpringBoot_Basic\MySpringBoot3.2App)
+2024-11-15T11:15:52.023+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.CustomerRepositoryTest           : The following 1 profile is active: "prod"
+2024-11-15T11:15:55.888+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-15T11:15:56.089+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 165 ms. Found 1 JPA repository interface.
+2024-11-15T11:15:59.009+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-15T11:15:59.209+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] o.h.Version                              : HHH000412: Hibernate ORM core version 6.4.10.Final
+2024-11-15T11:15:59.322+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] o.h.c.i.RegionFactoryInitiator           : HHH000026: Second-level cache disabled
+2024-11-15T11:16:00.219+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-15T11:16:00.336+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2024-11-15T11:16:00.657+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.z.h.p.HikariPool                       : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@65503a26
+2024-11-15T11:16:00.660+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2024-11-15T11:16:00.731+09:00  WARN 32320 --- [MySpringBoot3.2App] [main] o.h.o.deprecation                        : HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-11-15T11:16:02.841+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-15T11:16:02.947+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T11:16:03.726+09:00  WARN 32320 --- [MySpringBoot3.2App] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-15T11:16:05.212+09:00  WARN 32320 --- [MySpringBoot3.2App] [main] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2024-11-15T11:16:07.844+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-11-15T11:16:08.094+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.CustomerRepositoryTest           : Started CustomerRepositoryTest in 17.396 seconds (process running for 22.173)
+2024-11-15T11:16:08.133+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.DatabaseRunner                   : DataSource 구현객체는 com.zaxxer.hikari.HikariDataSource 
+2024-11-15T11:16:08.135+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.DatabaseRunner                   : DB Product Name = MariaDB
+2024-11-15T11:16:08.136+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.DatabaseRunner                   : DB URL = jdbc:mariadb://127.0.0.1:3307/boot_db?user=boot&password=***
+2024-11-15T11:16:08.136+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.DatabaseRunner                   : DB Username = boot
+2024-11-15T11:16:08.139+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.MyRunner                         : CustomVO = CustomVO(mode=운영 환경, rate=0.8)
+2024-11-15T11:16:08.144+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.MyRunner                         : MyBootProperties 객체의 getFullName() = Prod환경 MyFirstBoot
+2024-11-15T11:16:08.145+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.MyRunner                         : ${myboot.name} Property = Prod환경
+2024-11-15T11:16:08.145+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.MyRunner                         : ${myboot.fullName} Property = Prod환경 MyFirstBoot
+2024-11-15T11:16:08.146+09:00  INFO 32320 --- [MySpringBoot3.2App] [main] c.b.m.r.MyRunner                         : ${myboot.age} Property = 17
+2024-11-15T11:16:10.587+09:00  INFO 32320 --- [MySpringBoot3.2App] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-15T11:16:10.593+09:00  INFO 32320 --- [MySpringBoot3.2App] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2024-11-15T11:16:10.606+09:00  INFO 32320 --- [MySpringBoot3.2App] [SpringApplicationShutdownHook] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
