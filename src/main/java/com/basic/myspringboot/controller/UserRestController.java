@@ -6,6 +6,7 @@ import com.basic.myspringboot.repository.CustomerRepository;
 import com.basic.myspringboot.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -48,4 +49,11 @@ public class UserRestController {
     }
 
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteUser(@PathVariable Long id) {
+        UserEntity user = userRepository.findById(id)
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        userRepository.delete(user);
+        return ResponseEntity.ok("ID = " + id + " User Deleted OK");
+    }
 }
