@@ -29,9 +29,7 @@ public class UserRestController {
 
     @GetMapping("/{id}")
     public UserEntity getUserById(@PathVariable Long id) {
-        return userRepository.findById(id) //Optional<UserEntity>
-                //orElseThrow(Supplier) Supplier 추상메서드 T get()
-                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        return getUserNotFound(id);
     }
 
     @GetMapping
@@ -51,9 +49,13 @@ public class UserRestController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteUser(@PathVariable Long id) {
-        UserEntity user = userRepository.findById(id)
-                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        UserEntity user = getUserNotFound(id);
         userRepository.delete(user);
         return ResponseEntity.ok("ID = " + id + " User Deleted OK");
+    }
+
+    private UserEntity getUserNotFound(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
     }
 }
