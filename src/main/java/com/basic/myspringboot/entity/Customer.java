@@ -12,7 +12,7 @@ public class Customer {
     //Primary Key
     @Id  
     //PK의 sequential 한 값 자동 증가 전략
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)
