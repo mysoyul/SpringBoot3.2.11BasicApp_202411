@@ -5,6 +5,7 @@
     <h2>User Form</h2>
     <form action="#" th:action="@{/adduser}" th:object="${user}" method="post">
         <label for="name">Name</label>
+        <!-- th:field 는 name, id, value 속성을 추가해주는 태그-->
         <input type="text" th:field="*{name}" id="name">
         <span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
         <br/>

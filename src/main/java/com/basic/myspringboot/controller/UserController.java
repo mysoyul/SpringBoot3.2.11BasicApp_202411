@@ -36,6 +36,7 @@ public class UserController {
     @PostMapping("/adduser")
     public String addUser(@Valid @ModelAttribute("user") UserEntity user,
                           BindingResult result, Model model) {
+        //입력항목 검증 오류가 발생했어?
         if (result.hasErrors()) {
             return "add-user";
         }
