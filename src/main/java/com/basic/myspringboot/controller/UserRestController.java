@@ -38,6 +38,14 @@ public class UserRestController {
         return userRepository.findAll();
     }
 
+    @PatchMapping("/users/{id}")
+    public UserEntity updateUser(@PathVariable Long id, @RequestBody UserEntity userDetail) {
+        UserEntity user = userRepository.findById(id)
+                .orElseThrow(() -> new BusinessException("User Not Found", HttpStatus.NOT_FOUND));
+        user.setName(userDetail.getName());
+        user.setEmail(userDetail.getEmail());
+        return userRepository.save(user);
+    }
 
 
 }
